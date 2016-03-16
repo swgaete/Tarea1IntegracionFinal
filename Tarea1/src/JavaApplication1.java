@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 import java.io.IOException;
 
 public class JavaApplication1 {
-	static boolean SonIguales;
+	static boolean SonIguales;	//variable para ver si son iguales
 	 public static void main(String[] args)throws Exception
 	    {
 		 	System.out.println("Parte 3.1 Tarea \n"); 
@@ -44,7 +44,7 @@ public class JavaApplication1 {
 	           
 	    }
 	 
-	 public static boolean SonIguales(boolean aux) {
+	 public static boolean SonIguales(boolean aux) { //retorna boolean
 	        if (aux)
 	        	return  true;
 
@@ -52,7 +52,7 @@ public class JavaApplication1 {
 	        	return false;
 
 	    }
-	 public static String leerFicheroUrl() {
+	 public static String leerFicheroUrl() { //lee el fichero 
 		    String str1="";
 		    String str2="";
 		    try {
@@ -72,7 +72,7 @@ public class JavaApplication1 {
 		return str2;
 		}
 	 
-	 public static String Hash(String mensaje) throws NoSuchAlgorithmException{
+	 public static String Hash(String mensaje) throws NoSuchAlgorithmException{ //transforma el string a hash
 		 
 		 MessageDigest md = MessageDigest.getInstance("SHA-256");
 	        md.update(mensaje.getBytes());
