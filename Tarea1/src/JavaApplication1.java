@@ -7,15 +7,15 @@ public class JavaApplication1 {
 	    {
 	        
 	        Scanner sc = new Scanner(System.in);
-	        String password;
+	        String mensaje;
 	        System.out.print("Introduzca el mensaje: ");
-	        password = sc.nextLine();
+	        mensaje = sc.nextLine();
 	    	String hash;
 	        System.out.print("Introduzca el hash: ");	
 	        hash = sc.nextLine();	
 	        
 	        MessageDigest md = MessageDigest.getInstance("SHA-256");
-	        md.update(password.getBytes());
+	        md.update(mensaje.getBytes());
 	        
 	        byte byteData[] = md.digest();
 	 
@@ -36,13 +36,15 @@ public class JavaApplication1 {
 	    	
 	        String FinalHash = hexString.toString();
 	         if(hash.toLowerCase().equalsIgnoreCase(FinalHash)){         
-	            System.out.println("Son iguales");
+	            System.out.println("Valido: True");
+	            System.out.println("Mensaje: "+mensaje);
 	         
 	          
 	        }else{
-	            System.out.println("No son iguales"); 
-	            System.out.println("Formato original Hex : " + hexString.toString());
-	            System.out.println("Formato dado Hex : " +hash);
+	            System.out.println("Valido: False"); 
+	            System.out.println("Mensaje : " +mensaje);
+	            System.out.println("Formato real calculado Hex : " + hexString.toString());
+	            
 	           
 	        }
 	         
