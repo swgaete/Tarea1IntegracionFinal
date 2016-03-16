@@ -12,7 +12,7 @@ public class JavaApplication1 {
 	static boolean SonIguales;
 	 public static void main(String[] args)throws Exception
 	    {
-	        
+		 	System.out.println("Parte 3.1 Tarea \n"); 
 	        Scanner sc = new Scanner(System.in);
 	        String mensaje;
 	        System.out.print("Introduzca el mensaje: ");
@@ -32,11 +32,11 @@ public class JavaApplication1 {
 	        }else{										//devuelve mensaje y boolean false si son desiguales
 	            System.out.println("Valido: False"); 	
 	            System.out.println("Mensaje : " +mensaje);
-	            System.out.println("Formato real calculado Hex : " + FinalHash.toString());
+	            System.out.println("Formato real calculado Hex : \n" + FinalHash.toString()+"\n");
 	            SonIguales(false);
 	           
 	        }
-	         
+	        System.out.println("Parte 3.3 Tarea \n"); 
 	        String FicheroTxt= leerFicheroUrl();
 	        System.out.println("Fichero obtenido desde la url: "+FicheroTxt);
 	        System.out.println("Hash obtenido desde la url: "+Hash(FicheroTxt));
